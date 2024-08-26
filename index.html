@@ -19,6 +19,12 @@
         font-weight: normal;
         font-style: normal;
     }
+    @keyframes tracking-in-contract{0%{letter-spacing:1em;opacity:0}40%{opacity:.6}100%{letter-spacing:normal;opacity:1}}
+    .tracking-in-contract{animation:tracking-in-contract .8s cubic-bezier(.215,.61,.355,1.000) both}
+    @keyframes tracking-in-contract{0%{letter-spacing:1em;opacity:0}40%{opacity:.6}100%{letter-spacing:normal;opacity:1}}
+    .tracking-in-expand{animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both}
+    .slide-in-blurred-top{animation:slide-in-blurred-top .6s cubic-bezier(.23,1.000,.32,1.000) both}
+    @keyframes slide-in-blurred-top{0%{transform:translateY(-1000px) scaleY(2.5) scaleX(.2);transform-origin:50% 0;filter:blur(40px);opacity:0}100%{transform:translateY(0) scaleY(1) scaleX(1);transform-origin:50% 50%;filter:blur(0);opacity:1}}
     
     [class^="ti-"], [class*=" ti-"] {
         font-family: 'themify';
@@ -12850,7 +12856,7 @@ textarea.form-control {
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
     <!-- page Navigation -->
-    <nav class="navbar custom-navbar navbar-expand-md navbar-light fixed-top" data-spy="affix" data-offset-top="10">
+    <nav class="navbar custom-navbar navbar-expand-md navbar-light fixed-top slide-in-blurred-top" data-spy="affix" data-offset-top="10">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="tro.png" style="width:150px;" alt="">
@@ -12887,8 +12893,8 @@ textarea.form-control {
     <!-- Page Header -->
     <header class="header">
         <div class="overlay">
-            <h1 class="subtitle">Simplifica tu gestión, maximiza tu éxito</h1>
-            <h1 class="title">CRISMAR</h1>  
+            <h1 class="subtitle tracking-in-contract">Simplifica tu gestión, maximiza tu éxito</h1>
+            <h1 class="title tracking-in-contract">CRISMAR</h1>  
         </div>  
         <div class="shape">
             <svg viewBox="0 0 1500 200">
